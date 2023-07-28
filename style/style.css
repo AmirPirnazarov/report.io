@@ -1,0 +1,102 @@
+body{
+  font-family: Muller Medium;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #821ebe;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: #821ebe;
+  color: #d1d1d1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ad2cfa;
+  color: #fff;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ad2cfa;
+  color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+#Daily, #Training{
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+
+}
+.btn_add{
+  margin-bottom: 15px;
+}
+.button_add:active{
+  background-color: #ad2cfa  !important;
+  color: #fff  !important;
+}
+.button_add:focus{
+  outline:none !important;
+  color: #fff !important;
+}
+
+.button_add:hover{
+  background-color: #ad2cfa;
+  color: #fff;
+}
+.button_add{
+  background-color: #821ebe;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.check_nt{
+  margin: 15px 0px;
+}
+
+.form-control:focus{
+  box-shadow: none;
+  border-color: #787878;
+}
+.form-control{
+  box-shadow: none;
+  margin-bottom: 10px;
+  font-family: Muller light;
+}
+.lab_form{  
+  padding: 0px 10px;
+  margin-bottom: 0px;
+  
+}
+
+

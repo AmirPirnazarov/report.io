@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://bootstraptema.ru/plugins/2015/bootstrap3/bootstrap.min.css" />
+  <script src="https://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://bootstraptema.ru/plugins/2015/b-v3-3-6/bootstrap.min.js"></script>
+  <script src="https://bootstraptema.ru/_sf/3/393.js"></script>
+  <script src="js/main.js"></script>
+  <link href="style/style.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Daily')" id="defaultOpen">Daily</button>
+    <button class="tablinks" onclick="openCity(event, 'Training')">Training</button>
+    <button class="tablinks" onclick="openCity(event, 'Report')">Report</button>
+  </div>
+
+  <div id="Daily" class="tabcontent container">
+      <div class="row">
+        <div class="col-sm-4">
+          
+            <div class="form-group" >
+              <label for="inputDate" class="lab_form">Введите дату:</label>
+              <input type="date" class="form-control">
+
+              <label for="Number_of_participants" class="lab_form">Количество часов:</label>
+              <input type="text" class="form-control">
+
+              <label for="subject" class="lab_form">Выберете тему:</label>
+                <select id="subject" name="subject">
+                  <option value="not_selected" >Не выбранно</option>
+                  <option value="Anglish">Английский язык</option>
+                  <option value="other">Другие тренинги</option>
+                  <option value="monitoring">Мониторинг офисов продаж</option>
+                  <option value="skill">Навыковые тренинги</option>
+                  <option value="trainees">Обучение </option>
+                  <option value="Interview">Собеседование</option>
+                  <option value="Testing">Тестирование</option>
+                  <option value="Functional">Функциональные тренинги</option>
+                </select>
+
+              <label for="comment" class="lab_form">Коментарии к теме:</label>
+              <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+            </div>
+          
+        </div>
+        <div class="col-sm-4">
+          
+            <div class="form-group">
+              <label for="аudience" class="lab_form">Аудитория:</label>
+              <select id="аudience" name="аudience">
+                <option value="not_selected">Не выбранно</option>
+                <option value="teznet">TezNet</option>
+                <option value="external">Внешние слушатели</option>
+                <option value="consultants_iss">Консультанты ИСС</option>
+                <option value="sellers_consultants">Продовцы консультанты ЦО</option>
+                <option value="leaders">Руководители</option>
+                <option value="employees">Сотрудники компании</option>
+                <option value="interns_iss">Стажеры ИСС</option>
+                <option value="interns_co">Стажеры ЦО</option>
+              </select>
+
+              <label for="comment_aud" class="lab_form">Коментарии к аудитории:</label>
+              <textarea class="form-control" rows="5" id="comment_aud" name="text"></textarea>
+
+              <label for="Number_of_participants" class="lab_form">Количество участников:</label>
+              <input type="text" class="form-control">
+
+              <label for="region" class="lab_form">Регион:</label>
+              <select id="region" name="region">
+                <option value="not_selected">Не выбранно</option>
+                <option value="dushanbe">Душанбе</option>
+                <option value="rrp">РРП</option>
+                <option value="sogd">Согд</option>
+                <option value="bohtar">Бохтар</option>
+                <option value="kulob">Куляб</option>
+                <option value="gbao">ГБАО</option>
+                <option value="gbao">Все регионы</option>
+              </select>
+            </div> 
+            
+        </div>
+        <div class="col-sm-4">
+          <label for="region" class="lab_form">Тренер:</label>
+          <select id="region" name="region">
+            <option value="not_selected">Не выбранно</option>
+            <option value="Madina">Мадина</option>
+            <option value="Malika">Малика</option>
+            <option value="Amir">Амир</option>
+            <option value="Ansor">Ансор</option>
+            <option value="Zamira">Замира</option>
+            <option value="Firuz">Фируз</option>
+            <option value="Maqsuda">Максуда</option>
+            <option value="Umed">Умед</option>
+            <option value="Husravsho">Хусравшо</option>
+            <option value="Gulmira">Гульмира</option>
+            <option value="Nigora">Нигора</option>
+          </select>
+
+          <label for="region" class="lab_form">Напарник тренера:</label>
+          <select id="region" name="region">
+            <option value="australia">Не выбранно</option>
+            <option value="Madina">Мадина</option>
+            <option value="Malika">Малика</option>
+            <option value="Amir">Амир</option>
+            <option value="Ansor">Ансор</option>
+            <option value="Zamira">Замира</option>
+            <option value="Firuz">Фируз</option>
+            <option value="Maqsuda">Максуда</option>
+            <option value="Umed">Умед</option>
+            <option value="Husravsho">Хусравшо</option>
+            <option value="Gulmira">Гульмира</option>
+            <option value="Nigora">Нигора</option>
+          </select>
+          <label class="form-check-label check_nt">
+            <input class="form-check-input" type="checkbox" name="remember"> Не менять текст
+          </label>
+        </br>
+          <input type="file" class="form-control-file btn_add" id="exampleFormControlFile1">
+          <button type="submit" class="btn  btn-block button_add"id="">Добавить</button>
+          <button type="submit" class="btn btn-block button_add">Отменить последнее </button>
+          
+          
+        </div>
+      </div> 
+      
+  </div> 
+  <div id="Training" class="tabcontent container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group" >
+            <label for="inputDate" class="lab_form">Начало обучения:</label>
+            <input type="date" class="form-control">
+
+            <label for="inputDate" class="lab_form">конец обучения:</label>
+            <input type="date" class="form-control">
+
+            <label for="region" class="lab_form">Тренер:</label>
+            <select id="region" name="region">
+              <option value="not_selected">Не выбранно</option>
+              <option value="Madina">Мадина</option>
+              <option value="Malika">Малика</option>
+              <option value="Amir">Амир</option>
+              <option value="Ansor">Ансор</option>
+              <option value="Zamira">Замира</option>
+              <option value="Firuz">Фируз</option>
+              <option value="Maqsuda">Максуда</option>
+              <option value="Umed">Умед</option>
+              <option value="Husravsho">Хусравшо</option>
+              <option value="Gulmira">Гульмира</option>
+              <option value="Nigora">Нигора</option>
+            </select>
+
+            <label for="region" class="lab_form">Регион:</label>
+              <select id="region" name="region">
+                <option value="not_selected">Не выбранно</option>
+                <option value="dushanbe">Душанбе</option>
+                <option value="rrp">РРП</option>
+                <option value="sogd">Согд</option>
+                <option value="bohtar">Бохтар</option>
+                <option value="kulob">Куляб</option>
+                <option value="gbao">ГБАО</option>
+                <option value="gbao">Все регионы</option>
+              </select>
+
+          </div>
+
+        </div>
+      </div>
+  </div>
+  <div id="Report" class="tabcontent">
+    <h3>Report</h3>
+  </div>
+
+<script type="text/javascript">
+  function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+</body>
+</html>
