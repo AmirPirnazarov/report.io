@@ -17,25 +17,28 @@
 
 <body>
   <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Daily')" id="defaultOpen">Daily</button>
-    <button class="tablinks" onclick="openCity(event, 'Training')">Training</button>
-    <button class="tablinks" onclick="openCity(event, 'Report')">Report</button>
+    <button class="tablinks" onclick="openCity(event, 'Daily')" id="defaultOpen">Ежедневно</button>
+    <button class="tablinks" onclick="openCity(event, 'Training')">Обучение</button>
+    <button class="tablinks" onclick="openCity(event, 'Trainings')">Тренинги</button>
+    <button class="tablinks" onclick="openCity(event, 'Monitoring')">Мониторинг</button>
+    <button class="tablinks" onclick="openCity(event, 'Report')">Отчет</button>
   </div>
 
-  <div id="Daily" class="tabcontent container">
+  <div id="Daily" class="tabcontent container was-validated">
       <div class="row">
         <div class="col-sm-4">
           
-            <div class="form-group" >
+            <div class="form-group " >
               <label for="inputDate" class="lab_form">Введите дату:</label>
-              <input type="date" class="form-control">
+              <input type="date" class="form-control " required>
+  
 
               <label for="Number_of_participants" class="lab_form">Количество часов:</label>
-              <input type="text" class="form-control">
+              <input type="number" class="form-control" required>
 
               <label for="subject" class="lab_form">Выберете тему:</label>
-                <select id="subject" name="subject">
-                  <option value="not_selected" >Не выбранно</option>
+                <select id="subject" name="subject" required>
+                  <option value="">Не выбранно</option>
                   <option value="Anglish">Английский язык</option>
                   <option value="other">Другие тренинги</option>
                   <option value="monitoring">Мониторинг офисов продаж</option>
@@ -47,10 +50,11 @@
                 </select>
 
               <label for="comment" class="lab_form">Коментарии к теме:</label>
-              <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+              <textarea class="form-control" rows="5" id="comment" name="text" ></textarea>
             </div>
           
         </div>
+        
         <div class="col-sm-4">
           
             <div class="form-group">
@@ -71,7 +75,7 @@
               <textarea class="form-control" rows="5" id="comment_aud" name="text"></textarea>
 
               <label for="Number_of_participants" class="lab_form">Количество участников:</label>
-              <input type="text" class="form-control">
+              <input type="number" class="form-control" required>
 
               <label for="region" class="lab_form">Регион:</label>
               <select id="region" name="region">
@@ -88,49 +92,69 @@
             
         </div>
         <div class="col-sm-4">
-          <label for="region" class="lab_form">Тренер:</label>
-          <select id="region" name="region">
-            <option value="not_selected">Не выбранно</option>
-            <option value="Madina">Мадина</option>
-            <option value="Malika">Малика</option>
-            <option value="Amir">Амир</option>
-            <option value="Ansor">Ансор</option>
-            <option value="Zamira">Замира</option>
-            <option value="Firuz">Фируз</option>
-            <option value="Maqsuda">Максуда</option>
-            <option value="Umed">Умед</option>
-            <option value="Husravsho">Хусравшо</option>
-            <option value="Gulmira">Гульмира</option>
-            <option value="Nigora">Нигора</option>
-          </select>
+          <label for="Number_of_participants" class="lab_form">Тренер:</label>
+            <input type="text" class="form-control" required>
 
-          <label for="region" class="lab_form">Напарник тренера:</label>
-          <select id="region" name="region">
-            <option value="australia">Не выбранно</option>
-            <option value="Madina">Мадина</option>
-            <option value="Malika">Малика</option>
-            <option value="Amir">Амир</option>
-            <option value="Ansor">Ансор</option>
-            <option value="Zamira">Замира</option>
-            <option value="Firuz">Фируз</option>
-            <option value="Maqsuda">Максуда</option>
-            <option value="Umed">Умед</option>
-            <option value="Husravsho">Хусравшо</option>
-            <option value="Gulmira">Гульмира</option>
-            <option value="Nigora">Нигора</option>
-          </select>
+          <label for="Number_of_participants" class="lab_form">Напарник тренера:</label>
+            <input type="text" class="form-control">
+
+          
           <label class="form-check-label check_nt">
             <input class="form-check-input" type="checkbox" name="remember"> Не менять текст
           </label>
         </br>
-          <input type="file" class="form-control-file btn_add" id="exampleFormControlFile1">
+          <input type="file" class="form-control-file btn_add input_f" id="exampleFormControlFile1">
           <button type="submit" class="btn  btn-block button_add"id="">Добавить</button>
           <button type="submit" class="btn btn-block button_add">Отменить последнее </button>
           
           
         </div>
       </div> 
+      <div class="Training_rep">
+      <table class="table align-middle">
+    <!-- Creating the first row as table headers -->
+        <tr>
+            <th>Дата</th>
+            <th>Часов</th>
+            <th>Тема</th>
+            <th>Коментари к Теме</th>
+            <th>Аудитория</th>
+            <th>Комментарии к Аудитории</th>
+            <th>Количество участников</th>
+            <th>Регион</th>
+            <th>Тренер</th>
+            <th>Напарник тренера</th>
+        </tr>
+        <!-- Creating the first row as table headers -->
+        <tr>
+            <td contenteditable="true">04/10/2023</td>
+            <td contenteditable="true">3</td>
+            <td contenteditable="true">Навыковые тренинги</td>
+            <td contenteditable="true">Типология личности Disc</td>
+            <td contenteditable="true">Руководители</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true">16</td>
+            <td contenteditable="true">Согд</td>
+            <td contenteditable="true">Гульмира</td>
+            <td contenteditable="true"></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">05/10/2023</td>
+            <td contenteditable="true">2</td>
+            <td contenteditable="true">Навыковые тренинги</td>
+            <td contenteditable="true">Тренинг SMM</td>
+            <td contenteditable="true">Сотрудники компании</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true">12</td>
+            <td contenteditable="true">Согд</td>
+            <td contenteditable="true">Амир</td>
+            <td contenteditable="true">Гульмира</td>
+        </tr>
       
+      </table>
+      <button type="submit" class="btn  btn-block button_add"id="">Сохранить</button>
+    </div>
   </div> 
   <div id="Training" class="tabcontent container">
       <div class="row">
@@ -142,21 +166,8 @@
             <label for="inputDate" class="lab_form">конец обучения:</label>
             <input type="date" class="form-control">
 
-            <label for="region" class="lab_form">Тренер:</label>
-            <select id="region" name="region">
-              <option value="not_selected">Не выбранно</option>
-              <option value="Madina">Мадина</option>
-              <option value="Malika">Малика</option>
-              <option value="Amir">Амир</option>
-              <option value="Ansor">Ансор</option>
-              <option value="Zamira">Замира</option>
-              <option value="Firuz">Фируз</option>
-              <option value="Maqsuda">Максуда</option>
-              <option value="Umed">Умед</option>
-              <option value="Husravsho">Хусравшо</option>
-              <option value="Gulmira">Гульмира</option>
-              <option value="Nigora">Нигора</option>
-            </select>
+            <label for="Number_of_participants" class="lab_form">Тренер:</label>
+            <input type="text" class="form-control" required>
 
             <label for="region" class="lab_form">Регион:</label>
               <select id="region" name="region">
@@ -170,13 +181,431 @@
                 <option value="gbao">Все регионы</option>
               </select>
 
+
+
           </div>
 
         </div>
+        <div class="col-sm-4" style="border-right: 1px solid #000">
+          <label for="direction" class="lab_form">Направление:</label>
+            <select id="direction" name="direction">
+              <option value="not_selected">Не выбранно</option>
+              <option value="not_selected">ИСС</option>
+              <option value="dushanbe">ЦО</option>
+            </select>
+
+            <label for="direction" class="lab_form">Тип обучения:</label>
+            <select id="direction" name="direction">
+              <option value="not_selected">Не выбранно</option>
+              <option value="not_selected">Оффлайн</option>
+              <option value="dushanbe">Онлайн</option>
+            </select>
+
+            <label for="Number_of_participants" class="lab_form">ФИО Стажера</label>
+            <input type="text" class="form-control">
+
+
+            <label class="form-check-label check_nt">
+            <input class="form-check-input" type="checkbox" name="remember"> Не менять текст
+          </label>
+
+          <button type="submit" class="btn  btn-block button_add"id="">Добавить</button>
+          <button type="submit" class="btn btn-block button_add">Отменить последнее </button>
+        </div>
+        
+
+
+
+        <div class="col-sm-4">
+          <label for="Number_of_participants" class="lab_form">Поиск по </label>
+          <input class="form-control me-2" type="text" placeholder="ФИО стажера">
+            
+          <label for="inputDate" class="lab_form">Начало обучения:</label>
+          <input type="date" class="form-control">
+          
+          <label for="Number_of_participants" class="lab_form">Тренер:</label>
+            <input type="text" class="form-control" required>
+
+            <label for="direction" class="lab_form">Направление:</label>
+            <select id="direction" name="direction">
+              <option value="not_selected">Не выбранно</option>
+              <option value="not_selected">ИСС</option>
+              <option value="dushanbe">ЦО</option>
+            </select>
+
+          <button class="btn  button_add" type="button">Поиск</button>
+        </div>
+
       </div>
+    <div class="Training_rep table-responsive">
+      <table class="table align-middle">
+    <!-- Creating the first row as table headers -->
+        <tr>
+            <th>Начало обучения</th>
+            <th>конец обучения</th>
+            <th>тренер</th>
+            <th>Регион</th>
+            <th>направление</th>
+            <th>тип обучения</th>
+            <th>ФИО Стажера</th>
+            <th>Тарифы</th>
+            <th>Услуги</th>
+            <th>Тест Финал</th>
+            <th>CCH</th>
+            <th>Invoice</th>
+            <th>Web2</th>
+            <th>КурсПК</th>
+            <th>Оценка тренера </th>
+            <th>Причина</th>
+            <th>итог</th>
+        </tr>
+        <!-- Creating the first row as table headers -->
+        <tr>
+            <td contenteditable="true">31.07.2023</td>
+            <td contenteditable="true">31.08.2023</td>
+            <td contenteditable="true">Амир</td>
+            <td contenteditable="true">Душанбе</td>
+            <td contenteditable="true">ЦО</td>
+            <td contenteditable="true">Оффлайн</td>
+            <td contenteditable="true">Мирзоалиева Парвинабону</td>
+            <td contenteditable="true">56%</td>
+            <td contenteditable="true">58%</td>
+            <td contenteditable="true">86%</td>
+            <td contenteditable="true">85%</td>
+            <td contenteditable="true">80%</td>
+            <td contenteditable="true">82%</td>
+            <td contenteditable="true">Не рекомендован</td>
+            <td contenteditable="true">не пришла</td>
+            <td contenteditable="true">не прошел</td>
+            <td contenteditable="true"></td>
+        </tr>
+
+        <tr>
+            <td contenteditable="true">31.07.2023</td>
+            <td contenteditable="true">31.08.2023</td>
+            <td contenteditable="true">Максуда</td>
+            <td contenteditable="true">Душанбе</td>
+            <td contenteditable="true">ЦО</td>
+            <td contenteditable="true">Оффлайн</td>
+            <td contenteditable="true">Пирназаров Амирчон</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+        </tr>
+      
+      </table>
+      
+    </div>
+    <button type="submit" class="btn  btn-block button_add"id="">Сохранить</button>
   </div>
-  <div id="Report" class="tabcontent">
-    <h3>Report</h3>
+  <div id="Trainings" class="tabcontent container">
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="inputDate" class="lab_form">Дата:</label>
+        <input type="date" class="form-control">
+
+        <label for="Number_of_participants" class="lab_form">ФИО </label>
+        <input class="form-control me-2" type="text" placeholder="ФИО">
+
+        <label for="Number_of_participants" class="lab_form">Название тренинга </label>
+        <input class="form-control me-2" type="text" placeholder="Название тренинга">
+
+        <label for="region" class="lab_form">Место проведения:</label>
+              <select id="region" name="region">
+                <option value="not_selected">Не выбранно</option>
+                <option value="dushanbe">Душанбе</option>
+                <option value="rrp">РРП</option>
+                <option value="sogd">Согд</option>
+                <option value="bohtar">Бохтар</option>
+                <option value="kulob">Куляб</option>
+                <option value="gbao">ГБАО</option>
+                <option value="gbao">Все регионы</option>
+              </select>
+
+
+        
+    </div>
+    <div class="col-sm-4">
+      <label for="аudience" class="lab_form">Аудитория:</label>
+              <select id="аudience" name="аudience">
+                <option value="not_selected">Не выбранно</option>
+                <option value="teznet">TezNet</option>
+                <option value="external">Внешние слушатели</option>
+                <option value="consultants_iss">Консультанты ИСС</option>
+                <option value="sellers_consultants">Продовцы консультанты ЦО</option>
+                <option value="leaders">Руководители</option>
+                <option value="employees">Сотрудники компании</option>
+                <option value="interns_iss">Стажеры ИСС</option>
+                <option value="interns_co">Стажеры ЦО</option>
+              </select>
+
+
+        <label for="Number_of_participants" class="lab_form">Тренер:</label>
+            <input type="text" class="form-control" required>
+
+
+        <label for="comment_aud" class="lab_form">Коментарии:</label>
+        <textarea class="form-control" rows="5" id="comment_aud" name="text"></textarea>
+      </div>
+      <div class="col-sm-4">
+        <label class="form-check-label check_nt">
+            <input class="form-check-input" type="checkbox" name="remember"> Не менять текст
+          </label>
+
+          <button type="submit" class="btn  btn-block button_add"id="">Добавить</button>
+          <button type="submit" class="btn btn-block button_add">Отменить последнее </button>
+      </div>
+
+    </div>
+    <div class="Training_rep">
+      <table class="table align-middle">
+    <!-- Creating the first row as table headers -->
+        <tr>
+            <th>Дата</th>
+            <th>ФИО</th>
+            <th>Название тренинга</th>
+            <th>Место проведеиня</th>
+            <th>Аудитория</th>
+            <th>Тренер</th>
+            <th>Коментарии</th>
+            
+            
+        </tr>
+        <!-- Creating the first row as table headers -->
+        <tr>
+            <td contenteditable="true">04/10/2023</td>
+            <td contenteditable="true">Пирназарова Амирчон</td>
+            <td contenteditable="true">Типология личности Disc</td>
+            <td contenteditable="true">Согд</td>
+            <td contenteditable="true">Сотрудники компании</td>
+            <td contenteditable="true">Гульмира</td>
+            <td contenteditable="true"></td>
+        </tr>
+        <tr>
+            <td contenteditable="true">04/10/2023</td>
+            <td contenteditable="true">Нигора Зиябаева</td>
+            <td contenteditable="true">Типология личности Disc</td>
+            <td contenteditable="true">Согд</td>
+            <td contenteditable="true">Сотрудники компании</td>
+            <td contenteditable="true">Гульмира</td>
+            <td contenteditable="true"></td>
+        </tr>
+
+        
+      
+      </table>
+      <button type="submit" class="btn  btn-block button_add"id="">Сохранить</button>
+    </div>
+  </div>
+
+
+  <div id="Monitoring" class="tabcontent container">
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="inputDate" class="lab_form">Дата визита:</label>
+        <input type="date" class="form-control">
+
+        <label for="Number_of_participants" class="lab_form">ФИО консультанта: </label>
+        <input class="form-control me-2" type="text" placeholder="ФИО консультанта">
+
+
+        <label for="Number_of_participants" class="lab_form">Офис обслуживания </label>
+        <input class="form-control me-2" type="text" placeholder="Место">
+
+        
+      </div>
+      <div class="col-sm-4">
+
+        <label for="Number_of_participants" class="lab_form">Вопрос тренера</label>
+        <input class="form-control me-2" type="text" placeholder="Вопрос">
+
+        <label for="region" class="lab_form">Ответил:</label>
+          <select id="direction" name="direction">
+                <option value="not_selected">Не выбранно</option>
+                <option value="dushanbe">Ответил</option>
+                <option value="not_selected">Частично</option>
+                <option value="not_selected">Не ответил</option>
+          </select>
+          
+          <button type="submit" id="addQuestion" class="btn btn-block button_add">Добавить вопрос</button>
+          <div id="questionContainer"></div>
+
+        <label for="region" class="lab_form">Номер визита:</label>
+        <select id="direction" name="direction">
+              <option value="not_selected">Не выбранно</option>
+              <option value="dushanbe">1</option>
+              <option value="not_selected">2</option>
+              <option value="not_selected">3</option>
+        </select>
+<div id="questionContainer" class="row"></div>
+
+<script>
+  var questionCounter = 0;
+
+  document.getElementById("addQuestion").addEventListener("click", function() {
+    questionCounter++;
+
+    var questionContainer = document.getElementById("questionContainer");
+
+    // Создайте новый div для каждого нового вопроса
+    var newQuestionDiv = document.createElement("div");
+    newQuestionDiv.className = "col";
+
+    // Создайте элементы для нового вопроса и ответа
+    var questionLabel = document.createElement("label");
+    questionLabel.textContent = "Вопрос тренера";
+    var questionInput = document.createElement("input");
+    questionInput.className = "form-control me-2";
+    questionInput.type = "text";
+    questionInput.placeholder = "Вопрос";
+
+    var answerLabel = document.createElement("label");
+    answerLabel.textContent = "Ответил:";
+    var answerSelect = document.createElement("select");
+    answerSelect.id = "direction";
+    answerSelect.name = "direction";
+    var answerOptions = ["Не выбрано", "Ответил", "Частично", "Не ответил"];
+    for (var i = 0; i < answerOptions.length; i++) {
+      var option = document.createElement("option");
+      option.value = answerOptions[i];
+      option.textContent = answerOptions[i];
+      answerSelect.appendChild(option);
+    }
+
+    // Создайте кнопку "Удалить вопрос"
+    var deleteButton = document.createElement("button");
+    deleteButton.textContent = "Удалить вопрос";
+    deleteButton.className = "btn btn-danger";
+    deleteButton.addEventListener("click", function() {
+      questionContainer.removeChild(newQuestionDiv);
+      questionCounter--;
+    });
+
+    // Добавьте элементы в новый div
+    newQuestionDiv.appendChild(questionLabel);
+    newQuestionDiv.appendChild(questionInput);
+    newQuestionDiv.appendChild(answerLabel);
+    newQuestionDiv.appendChild(answerSelect);
+    newQuestionDiv.appendChild(deleteButton);
+
+    // Добавьте новый div в контейнер
+    questionContainer.appendChild(newQuestionDiv);
+  });
+</script>
+
+
+
+        
+
+      </div>
+      <div class="col-sm-4">
+        <label for="comment_aud" class="lab_form">Коментарии:</label>
+        <textarea class="form-control" rows="5" id="comment_aud" name="text"></textarea>
+
+        <label for="Number_of_participants" class="lab_form">Тренер:</label>
+            <input type="text" class="form-control" required>
+
+
+        <label class="form-check-label check_nt">
+            <input class="form-check-input" type="checkbox" name="remember"> Не менять текст
+          </label>
+
+          <button type="submit" class="btn  btn-block button_add"id="">Добавить</button>
+          <button type="submit" class="btn btn-block button_add">Отменить последнее </button>
+      </div>
+    </div>
+    <div class="Training_rep">
+      <table class="table align-middle">
+    <!-- Creating the first row as table headers -->
+        <tr>
+            <th>Дата визита</th>
+            <th>ФИО</th>
+            <th>Офис обслуживания</th>
+            <th>Вопрос тренера</th>
+            <th>Ответил</th>
+            <th>Номер визита:</th>
+            <th>Коментарии</th>
+            <th>Тренер</th>
+            
+        </tr>
+        <!-- Creating the first row as table headers -->
+        <tr>
+            <td contenteditable="true">04/10/2023</td>
+            <td contenteditable="true">Пирназарова Амирчон</td>
+            <td contenteditable="true">Корвон</td>
+            <td contenteditable="true">Чи гап 40</td>
+            <td contenteditable="true">ответил</td>
+            <td contenteditable="true">2</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true">Ансор</td>
+        </tr>
+        
+      
+      </table>
+      <button type="submit" class="btn  btn-block button_add"id="">Сохранить</button>
+    </div>
+  </div>
+  </div>
+
+  <div id="Report" class="tabcontent container">
+    <div class="row">
+      <div class="col-sm-6" style="border-right: 1px solid #000">
+        <label for="region" class="lab_form">Выберете период:</label>
+        <select id="direction" name="direction">
+              <option value="not_selected">Не выбранно</option>
+              <option value="dushanbe">Неделя</option>
+              <option value="not_selected">Месяц</option>
+              <option value="not_selected">H1</option>
+              <option value="not_selected">H2</option>
+        </select>
+
+        <label for="inputDate" class="lab_form">Начало даты:</label>
+        <input type="date" class="form-control">
+        <label for="inputDate" class="lab_form">Конец даты:</label>
+        <input type="date" class="form-control">
+
+
+        <label for="region" class="lab_form">Раздел:</label>
+        <select id="direction" name="direction">
+              <option value="not_selected">Не выбранно</option>
+              <option value="not_selected">Английский язык</option>
+              <option value="dushanbe">Обучение стажеров</option>
+              <option value="not_selected">Функциональные тренинги</option>
+              <option value="not_selected">Навыковые тренинги</option>
+              <option value="not_selected">Другие тренинги</option>
+              <option value="not_selected">Мониторинг офисов</option>
+              <option value="not_selected">Тестирование</option>
+              <option value="not_selected">Собеседование</option>
+
+        </select>
+
+        <label for="Number_of_participants" class="lab_form">Тренер:</label>
+            <input type="text" class="form-control" required>
+
+        <button type="submit" class="btn  btn-block button_add"id="">Сформировать отчет</button>
+
+      </div>
+      <div class="col-sm-6">
+        <h2>Функциональные тренинги</h2>
+        <p>Количество тренингов: 10</p>
+        <p>Количество часов: 26</p>
+        <p>Количество участников: 40</p>
+        <br>
+        <h2>Наименования тренингов</h2>
+        <p>Новая линейка тп Салом</p>
+        <p>Бизнес процессы B2B </p>
+        <p>Рабочие программы invoice, web2, cch</p>
+        
+
+      </div>
+    </div>
   </div>
 
 <script type="text/javascript">

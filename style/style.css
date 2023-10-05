@@ -51,13 +51,23 @@ select {
   resize: vertical;
   margin-bottom: 10px;
 }
-#Daily, #Training{
+#Daily, #Training, #Report, #Trainings, #Monitoring{
   margin-top: 40px;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
 
 }
+.Training_rep{
+  margin-top: 40px;
+  background-color: #e7e7e7;
+  padding: 30px;
+  border-radius: 10px;
+}
+.input_f{
+  width: 100%;
+}
+
 .btn_add{
   margin-bottom: 15px;
 }
